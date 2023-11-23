@@ -2,9 +2,9 @@ import React from "react";
 import aboutImg from "../assets/images/about.png";
 const About = () => {
   const info = [
-    { text: "Years experience", count: "04" },
-    { text: "Completed Projects", count: "24" },
-    { text: "Companies Work", count: "06" },
+    { text: "Years experience", count: "1" },
+    { text: "Completed Projects", count: "4" },
+    { text: "Companies Work", count: "2" },
   ];
   return (
     <section id="about" className="py-10 text-white">

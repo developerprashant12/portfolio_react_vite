@@ -1,12 +1,23 @@
 import React from "react";
 import hero from "../assets/images/hero.png";
+
 const Hero = () => {
-  const social_media = [
-    "logo-instagram",
-    "logo-facebook",
-    "logo-linkedin",
-    "logo-twitter",
-  ];
+  const social_media = {
+    instagram: "https://www.instagram.com/prashantmishra6878/", 
+    facebook: "https://www.facebook.com/profile.php?id=100006694141676", 
+    linkedin: "https://www.linkedin.com/in/prashant-mishra-b742231bb/", 
+    twitter: "https://twitter.com/Prashant6878", 
+  };
+
+  const handleContactButtonClick = () => {
+    const phoneNumber = "9340169981";
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
+  const handleSocialMediaClick = (platform) => {
+    window.open(social_media[platform]);
+  };
+
   return (
     <section
       id="home"
@@ -22,19 +33,22 @@ const Hero = () => {
               Hello!
               <br />
             </span>
-            My Name is <span>John Alex</span>
+            My Name is <span>Prashant Mishra</span>
           </h1>
           <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
-            Fullstack Developer
+            ReactJS Developer
           </h4>
-          <button className="btn-primary mt-8">Contact Me</button>
+          <button className="btn-primary mt-8" onClick={handleContactButtonClick}>
+            Contact Me
+          </button>
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
-            {social_media?.map((icon) => (
+            {Object.keys(social_media).map((platform) => (
               <div
-                key={icon}
-                className="text-gray-600 hover:text-white cursor-pointer "
+                key={platform}
+                className="text-gray-600 hover:text-white cursor-pointer"
+                onClick={() => handleSocialMediaClick(platform)}
               >
-                <ion-icon name={icon}></ion-icon>
+                <ion-icon name={`logo-${platform}`} />
               </div>
             ))}
           </div>
