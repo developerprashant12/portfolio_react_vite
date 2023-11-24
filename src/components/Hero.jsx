@@ -22,6 +22,7 @@ const Hero = () => {
     <section
       id="home"
       className="min-h-screen flex py-10 md:flex-row flex-col items-center mt-5"
+      style={{marginTop:"4rem"}}
     >
       <div className="flex-1 flex items-center justify-center h-full">
         <img src={hero} alt="" className="h-full object-cover" />
