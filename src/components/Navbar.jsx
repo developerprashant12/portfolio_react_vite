@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -38,7 +39,7 @@ const Navbar = () => {
           <ul className="flex items-center gap-1 py-2 text-lg">
             {menuLinks?.map((menu, i) => (
               <li key={i} className="px-6 hover:text-cyan-600">
-                <a href={menu?.link}>{menu?.name}</a>
+                <Link  href={menu?.link}>{menu?.name}</Link>
               </li>
             ))}
           </ul>
@@ -64,7 +65,7 @@ const Navbar = () => {
                 key={i}
                 className="px-6 hover:text-cyan-600"
               >
-                <a href={menu?.link}>{menu?.name}</a>
+                <Link href={menu?.link}>{menu?.name}</Link>
               </li>
             ))}
           </ul>

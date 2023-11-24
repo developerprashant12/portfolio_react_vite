@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Bot from "./components/Bot";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 
 const App = () => {
   return (

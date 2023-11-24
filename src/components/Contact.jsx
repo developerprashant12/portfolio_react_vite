@@ -43,6 +43,7 @@ const handleSubmit = (e) => {
     )
     .then((response) => {
       console.log("Email sent:", response);
+      alert("Message Send Successfully")
     })
     .catch((error) => {
       console.error("Error sending email:", error);
@@ -129,6 +130,7 @@ const handleSubmit = (e) => {
         </div>
       </div>
     </section>
+    
   );
 };
 
