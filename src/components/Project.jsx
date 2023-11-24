@@ -14,35 +14,34 @@ const Project = () => {
   const projects = [
     {
       img: project1,
-      name: "Movie App",
-      github_link: "https://github.com/Sridhar-C-25",
-      live_link: "https://myreactflix.netlify.app",
+      name: "G&U Wedding Image Web",
+      github_link: "https://github.com/developerprashant12/museyReduxReact",
+      live_link: "https://musey.ai/", 
     },
     {
       img: project2,
-      name: "Job search Web App",
-      github_link: "https://github.com/Sridhar-C-25/jobsearchapp",
-      live_link: "https://myjobsearch.netlify.app",
+      name: "LLM Review Site",
+      github_link: "https://github.com/developerprashant12/llm",
+      live_link: "https://llmpilot.netlify.app/",
     },
     {
       img: project3,
-      name: "Highking",
-      github_link: "https://github.com/Sridhar-C-25/highking",
-      live_link: "https://highking01.netlify.app",
+      name: "NextPorn",
+      // github_link: "https://github.com/Sridhar-C-25/highking",
+      live_link: "https://nextporn.co/",
     },
     {
       img: project4,
-      name: "React Nav",
-      github_link:
-        "https://github.com/Sridhar-C-25/reacttailwindnavbar-with-dropdown",
-      live_link: "https://reacttailwindnavbar.netlify.app",
+      name: "Profile Generator Site",
+      // github_link:"https://github.com/Sridhar-C-25/reacttailwindnavbar-with-dropdown",
+      live_link: "http://profilgenerator.de/",
     },
-    {
-      img: project5,
-      name: "Vue Country",
-      github_link: "https://github.com/Sridhar-C-25",
-      live_link: "https://vuecountry05.netlify.app",
-    },
+    // {
+    //   img: project5,
+    //   name: "Vue Country",
+    //   github_link: "https://github.com/Sridhar-C-25",
+    //   live_link: "https://vuecountry05.netlify.app",
+    // },
   ];
   return (
     <section id="projects" className="py-10 text-white">

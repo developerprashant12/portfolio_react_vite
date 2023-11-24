@@ -7,7 +7,7 @@ const Contact = () => {
     { logo: "logo-whatsapp", text: "9340169981" },
     {
       logo: "location",
-      text: "demo location",
+      text: "My Current location",
     },
   ];
 
