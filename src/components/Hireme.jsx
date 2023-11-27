@@ -21,6 +21,10 @@ const Hireme = () => {
   };
   
 
+   const handleSocialMediaClick = (platform) => {
+    window.open(social_media[platform]);
+  };
+
 
   return (
     <section id="hireme" className="py-10 px-3 text-white">
