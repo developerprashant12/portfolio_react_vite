@@ -1,11 +1,23 @@
 import React from "react";
 import aboutImg from "../assets/images/prashant.png";
+import pdf from "./pm.pdf";
+
 const About = () => {
   const info = [
     { text: "Years experience", count: "1" },
     { text: "Completed Projects", count: "4" },
     { text: "Companies Work", count: "2" },
   ];
+
+   const handleDownload = () => {
+    const downloadLink = document.createElement('a');
+    downloadLink.href = pdf;
+    downloadLink.download = 'pm.pdf';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
+
   return (
     <section id="about" className="py-10 text-white">
       <div className="text-center mt-8">
@@ -35,8 +47,8 @@ const About = () => {
               </div>
               <br />
               <br />
-              <a href="./src/assets/pm.pdf" download>
-                <button className="btn-primary">Download CV</button>
+              <a>
+                <button className="btn-primary" onClick={handleDownload}>Download CV</button>
               </a>
             </div>
           </div>
