@@ -1,6 +1,6 @@
 import React from "react";
 import aboutImg from "../assets/images/prashant.png";
-import pdf from "./pm.pdf";
+import pdf from "../../pm.pdf";
 
 const About = () => {
   const info = [
