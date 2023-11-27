@@ -9,10 +9,10 @@ const About = () => {
     { text: "Companies Work", count: "2" },
   ];
 
-   const handleDownload = () => {
-    const downloadLink = document.createElement('a');
+  const handleDownload = () => {
+    const downloadLink = document.createElement("a");
     downloadLink.href = pdf;
-    downloadLink.download = 'pm.pdf';
+    downloadLink.download = "pm.pdf";
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
@@ -29,10 +29,17 @@ const About = () => {
           <div className="p-2">
             <div className="text-gray-300 my-3">
               <p className="text-justify leading-7 w-11/12 mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                eos, quam vel quisquam, explicabo sit labore dignissimos optio
-                ratione quibusdam doloribus pariatur consequuntur sint.
-                Reprehenderit cupiditate possimus facere quasi voluptatem?
+                I'm a hardworking and creative professional who loves ReactJs.
+                In the last 1 years, I've learned a lot and worked on [HTML,
+                CSS, ReactJS , MongoDB, Redux-Toolkit, Firebase, Bootstrap,
+                Python or NodeJS], contributing to [4] successful projects. I'm
+                really good at [ReactJS], combining technical know-how with
+                passion to come up with new ideas. I always try to do my best
+                and enjoy working in fast-changing environments that push me to
+                keep learning. Outside of work, I like [watching movies, eating
+                food, sleeping, walking around and talking people], which help me
+                see things from different angles. I'm excited to use my skills
+                to make a positive impact in the future.
               </p>
               <div className="flex mt-10 items-center gap-7">
                 {info.map((content) => (
@@ -48,7 +55,9 @@ const About = () => {
               <br />
               <br />
               <a>
-                <button className="btn-primary" onClick={handleDownload}>Download CV</button>
+                <button className="btn-primary" onClick={handleDownload}>
+                  Download CV
+                </button>
               </a>
             </div>
           </div>

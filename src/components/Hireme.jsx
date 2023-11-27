@@ -15,19 +15,18 @@ const Hireme = () => {
             Do you want any work from me?
           </h2>
           <p className="lg:text-left text-justify max-w-lg text-sm mt-4 text-gray-200 leading-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dicta
-            soluta quos tempore eos accusamus cupiditate, amet in similique
-            sapiente obcaecati odio deleniti architecto corporis ratione.
-            Consequatur a quidem maiores!
+            If you have any work with me then you can connect with me with the
+            help of social media i.e. [LinkedIn, Instagram, Twitter and I have
+            also provided you my number. You can contact me from there].
           </p>
           <button className="btn-primary mt-10">Say Hello</button>
         </div>
         <div>
-        <img
-          src={hireMe}
-          alt=""
-          className="lg:h-[30rem] h-80 lg:absolute bottom-0 right-0 object-cover w-80"
-        />
+          <img
+            src={hireMe}
+            alt=""
+            className="lg:h-[30rem] h-80 lg:absolute bottom-0 right-0 object-cover w-80"
+          />
         </div>
       </div>
     </section>
