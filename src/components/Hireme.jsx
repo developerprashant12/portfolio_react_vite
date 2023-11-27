@@ -1,6 +1,11 @@
 import React from "react";
 import hireMe from "../assets/images/pp.png";
 const Hireme = () => {
+
+const handleSayHelloClick = () => {
+    alert("Feel free to connect with me on social media for any work inquiries!");
+  };
+
   return (
     <section id="hireme" className="py-10 px-3 text-white">
       <div className="text-center">
@@ -19,7 +24,7 @@ const Hireme = () => {
             help of social media i.e. [LinkedIn, Instagram, Twitter and I have
             also provided you my number. You can contact me from there].
           </p>
-          <button className="btn-primary mt-10">Say Hello</button>
+          <button className="btn-primary mt-10" onClick={handleSayHelloClick}>Say Hello</button>
         </div>
         <div>
           <img
