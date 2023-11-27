@@ -1,10 +1,26 @@
-import React from "react";
+import React,{useState} from "react";
 import hireMe from "../assets/images/pp.png";
 const Hireme = () => {
+   const [isModalOpen, setIsModalOpen] = useState(false);
 
-const handleSayHelloClick = () => {
-    alert("Feel free to connect with me on social media for any work inquiries!");
+   const social_media = {
+    instagram: "https://www.instagram.com/prashantmishra6878/", 
+    facebook: "https://www.facebook.com/profile.php?id=100006694141676", 
+    linkedin: "https://www.linkedin.com/in/prashant-mishra-b742231bb/", 
+    twitter: "https://twitter.com/Prashant6878", 
   };
+
+  console.log(social_media)
+
+  const handleSayHello = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+  
+
 
   return (
     <section id="hireme" className="py-10 px-3 text-white">
@@ -24,7 +40,7 @@ const handleSayHelloClick = () => {
             help of social media i.e. [LinkedIn, Instagram, Twitter and I have
             also provided you my number. You can contact me from there].
           </p>
-          <button className="btn-primary mt-10" onClick={handleSayHelloClick}>Say Hello</button>
+          <button className="btn-primary mt-10" onClick={handleSayHello}>Say Hello</button>
         </div>
         <div>
           <img
@@ -34,6 +50,31 @@ const handleSayHelloClick = () => {
           />
         </div>
       </div>
+       {isModalOpen && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-75 overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+          <div className="bg-white text-black p-6 rounded-xl max-w-md">
+            <h2 className="text-2xl font-semibold mb-5 text-cyan-600"> &#129312;Hello! Connect with Me&#129312;</h2>
+            <p className="text-gray-900 mb-2">
+              You can reach out to me on the following social media platforms:
+            </p>
+            <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
+            {Object.keys(social_media).map((platform) => (
+              <div
+                key={platform}
+                className="text-gray-600 hover:text-cyan-500 text-center cursor-pointer"
+                onClick={() => handleSocialMediaClick(platform)}
+              >
+                <ion-icon name={`logo-${platform}`} />
+                <p className="text-sm">{platform}</p>
+              </div>
+            ))}
+          </div>
+            <button className="btn-secondary mt-4 bg-cyan-500 px-4 p-1 text-white float-right rounded" onClick={handleCloseModal}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
