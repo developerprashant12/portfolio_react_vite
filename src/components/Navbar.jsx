@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import {Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [open, setOpen] = useState(false);
   const menuLinks = [
-    { name: "HOME", link: "/home" },
-    { name: "ABOUT", link: "/about" },
-    { name: "SKILLS", link: "/skills" },
-    { name: "PROJECTS", link: "/projects" },
-    { name: "CONTACT", link: "/contact" },
+    { name: "HOME", link: "home" },
+    { name: "ABOUT", link: "about" },
+    { name: "SKILLS", link: "skills" },
+    { name: "Hireme", link: "hireme" },
+    { name: "PROJECTS", link: "projects" },
+    { name: "CONTACT", link: "contact" },
   ];
 
   useEffect(() => {
@@ -39,7 +40,16 @@ const Navbar = () => {
           <ul className="flex items-center gap-1 py-2 text-lg">
             {menuLinks?.map((menu, i) => (
               <li key={i} className="px-6 hover:text-cyan-600">
-                <Link  href={menu?.link}>{menu?.name}</Link>
+                <ScrollLink
+                  to={menu?.link}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={50}
+                  className="cursor-pointer"
+                >
+                  {menu?.name}
+                </ScrollLink>
               </li>
             ))}
           </ul>
@@ -48,24 +58,35 @@ const Navbar = () => {
           onClick={() => setOpen(!open)}
           className={`z-[999]  ${
             open ? "text-gray-900" : "text-gray-100"
-          } text-3xl md:hidden m-5`}
+          } text-3xl md:hidden m-5 flex`}
         >
           <ion-icon name="menu"></ion-icon>
         </div>
         <div
-          className={`md:hidden text-gray-900 absolute w-2/3 h-screen
-      px-7 py-2 font-medium bg-white top-0 duration-300 ${
+          className={`md:hidden  text-gray-900 absolute w-2/3 h-screen
+      px-4 py-2 font-medium bg-white top-0 duration-300 ${
         open ? "right-0" : "right-[-100%]"
       }`}
         >
-          <ul className="flex flex-col justify-center h-full gap-10 py-2 text-lg">
+          <ul className="flex flex-col justify-center h-full gap-10 py-2 text-xl text-cyan-600">
+           
+            <p className="text-3xl text-black">&#129312;NA<span className="text-cyan-800">VB</span>AR&#129312; <hr/></p>
             {menuLinks?.map((menu, i) => (
               <li
                 onClick={() => setOpen(false)}
                 key={i}
-                className="px-6 hover:text-cyan-600"
+                className="px-6 hover:text-cyan-600 "
               >
-                <Link href={menu?.link}>{menu?.name}</Link>
+                <ScrollLink
+                  to={menu?.link}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={50}
+                  className="cursor-pointer "
+                >
+                  {menu?.name}
+                </ScrollLink>
               </li>
             ))}
           </ul>
